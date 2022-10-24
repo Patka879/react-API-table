@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {Table} from 'react-bootstrap';
 import Filters from "./Filters";
+import icon from "../images/icon.png"
 
 export default function Games() {
     const [data, setData] = useState([]);
@@ -23,6 +24,11 @@ export default function Games() {
     function padTo2Digits(num) {
         return String(num).padStart(2, '0');
       }
+    
+    function randomNumber() {
+        const randomInteger = Math.floor(Math.random() * 30) + 1
+        return randomInteger
+    }
   
     return(
         <div>
@@ -43,6 +49,7 @@ export default function Games() {
                         <th>TITLE</th>
                         <th>TIME</th>
                         <th>TEAM 1</th>
+                        <th></th>
                         <th>TEAM 2</th>
                         <th>TOURNAMENT</th>
                     </tr>
@@ -53,13 +60,18 @@ export default function Games() {
                         <td>{data.title}</td>
                         <td>{padTo2Digits(new Date(data.startTime).getUTCHours()) + `:` + padTo2Digits(new Date(data.startTime).getUTCMinutes())}</td>
                         <td>
-                            <div>{data.teams[0].name}
+                            <div className="team1-cell">
+                                {data.teams[0].name}
                                 <img className="team-logo" alt="team-logo" src={data.teams[0].logoUrl} />
+                                {randomNumber()}
                             </div>
                         </td>
+                        <td><img className="vs-img" src={icon} alt="icon" /></td>
                         <td>
-                            <div>{data.teams[1].name}
+                            <div className="team2-cell">
+                                {randomNumber()}
                                 <img className="team-logo" alt="team-logo" src={data.teams[1].logoUrl} />
+                                {data.teams[1].name}
                             </div>
                         </td>
                         <td>{data.tournament.name}</td>

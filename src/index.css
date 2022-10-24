@@ -9,11 +9,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #bcbfc2;
+    margin: 0 350px;
 }
-
-App {
-    width: 800px;
-}  
   
 table {
     border: none;
@@ -28,7 +25,8 @@ th {
     background-color: #363B3F;
     border-top: none;
     height: 32px;
-    color:#A1A3A5
+    color:#A1A3A5;
+    padding: 8px;
 }
 
 tr {
@@ -40,24 +38,51 @@ tr {
 
 td {
     border: none;
-    padding: 16px 20px;
+    padding: 16px 0px;
     text-align: center;
 }
 
-tr:last-child {
+td:last-child {
+    max-width: 60px;
+    overflow: hidden;
     text-overflow: ellipsis;
-    width: 100px;
+    white-space: nowrap;
 }
 
 td:nth-child(1),  
 td:last-child {  
     color: #A1A3A5;
+}
+
+td:last-child {
     text-align: start;
+}
+
+td:nth-child(3) {
+    text-align: end;
+}
+
+.team1-cell, .team2-cell {
+    display: flex;
+    align-items: center;
+}
+
+.team1-cell {
+    justify-content: end; 
+}
+
+.vs-img {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.team2-cell {
+    justify-content: flex-start;
 }
 
 .team-logo {
     width: auto;
-    height: 12px;
+    height: 19px;
+    margin: 0 20px;
 }
 
 .filters-container {
