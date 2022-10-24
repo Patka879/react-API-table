@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Montsserat' ;
+    src: url(./fonts/montserrat/Montserrat-Regular.otf);
+}
+
+body {
+    margin: 20px;
+    font-family: 'Montsserat';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  
+table {
+    border: none;
+    border-radius: 10px;
+    border-collapse: collapse;
+    font-size: 14px;
+    overflow: hidden
+}
+
+th {
+    background-color: #363B3F;
+    border-top: none;
+    height: 32px;
+    color:#A1A3A5
+}
+
+tr {
+    border-bottom: 1px solid #363B3F;
+    background-color: #27282a;
+    margin-bottom: 10px;
+    color: white;
+}
+
+td {
+    border: none;
+    padding: 16px 20px;
+    text-align: center;
+}
+
+tr:last-child {
+    text-overflow: ellipsis;
+    width: 100px;
+}
+
+td:nth-child(1),  
+td:last-child {  
+    color: #A1A3A5;
+    text-align: start;
+}
+
+.team-logo {
+    width: auto;
+    height: 12px;
+}
+  
