@@ -8,15 +8,20 @@ body {
     font-family: 'Montsserat';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  
+    background-color: #bcbfc2;
+}
+
+App {
+    width: 800px;
+}  
   
 table {
     border: none;
     border-radius: 10px;
     border-collapse: collapse;
     font-size: 14px;
-    overflow: hidden
+    overflow: hidden;
+    width: 100%;
 }
 
 th {
@@ -53,5 +58,29 @@ td:last-child {
 .team-logo {
     width: auto;
     height: 12px;
+}
+
+.filters-container {
+    display:flex;
+    flex-direction: row;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.input-filter, .select-filter {
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    margin: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+select, input {
+    width: 200px;
+    height: 40px;
+    color: white;
+    background-color: #363B3F;
+    padding-left: 10px;
 }
   
