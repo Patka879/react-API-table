@@ -30,7 +30,8 @@ export default function Filters({filterData}) {
                     onChange = {e => {
                         setTournament(e.currentTarget.value)
                     }}
-                    type="text" />
+                    type="text" 
+                />
             </div>
         </div>
     )

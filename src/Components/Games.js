@@ -21,9 +21,15 @@ export default function Games() {
         setFilteredData(data)
     }, [data])
 
+    
     function padTo2Digits(num) {
         return String(num).padStart(2, '0');
-      }
+    }
+
+    function getHoursFromDate(date) {
+        const hours = padTo2Digits(new Date(date).getUTCHours()) + `:` + padTo2Digits(new Date(date).getUTCMinutes())
+        return hours
+    }
     
     function randomNumber() {
         const randomInteger = Math.floor(Math.random() * 30) + 1
@@ -57,28 +63,28 @@ export default function Games() {
                     </tr>
                 </thead>
                 {filteredData.map(data => (
-                        <tbody key={data.id}>
-                    <tr>
-                        <td>{data.title}</td>
-                        <td>{padTo2Digits(new Date(data.startTime).getUTCHours()) + `:` + padTo2Digits(new Date(data.startTime).getUTCMinutes())}</td>
-                        <td>
-                            <div className="team1-cell">
-                                {data.teams[0].name}
-                                <img className="team-logo" alt="team-logo" src={data.teams[0].logoUrl} />
-                            </div>
-                        </td>
-                        <td>{randomNumber()}</td>
-                        <td><img className="vs-img" src={icon} alt="icon" /></td>
-                        <td>{randomNumber()}</td>
-                        <td>
-                            <div className="team2-cell">
-                                <img className="team-logo" alt="team-logo" src={data.teams[1].logoUrl} />
-                                {data.teams[1].name}
-                            </div>
-                        </td>
-                        <td>{data.tournament.name}</td>
-                    </tr>
-                </tbody>))}
+                    <tbody key={data.id}>
+                        <tr>
+                            <td>{data.title}</td>
+                            <td>{getHoursFromDate(data.startTime)}</td>
+                            <td>
+                                <div className="team1-cell">
+                                    {data.teams[0].name}
+                                    <img className="team-logo" alt="team-logo" src={data.teams[0].logoUrl} />
+                                </div>
+                            </td>
+                            <td>{randomNumber()}</td>
+                            <td><img className="vs-img" src={icon} alt="icon" /></td>
+                            <td>{randomNumber()}</td>
+                            <td>
+                                <div className="team2-cell">
+                                    <img className="team-logo" alt="team-logo" src={data.teams[1].logoUrl} />
+                                    {data.teams[1].name}
+                                </div>
+                            </td>
+                            <td>{data.tournament.name}</td>
+                        </tr>
+                    </tbody>))}
             </Table>  
         </div>  
     )

@@ -9,7 +9,12 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #d8dadb;
-    margin: 0 250px;
+    margin: 20px 250px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0
 }
   
 table {
