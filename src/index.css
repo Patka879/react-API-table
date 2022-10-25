@@ -8,8 +8,8 @@ body {
     font-family: 'Montsserat';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #bcbfc2;
-    margin: 0 350px;
+    background-color: #d8dadb;
+    margin: 0 250px;
 }
   
 table {
@@ -19,6 +19,7 @@ table {
     font-size: 14px;
     overflow: hidden;
     width: 100%;
+    padding: 0 16px;
 }
 
 th {
@@ -26,7 +27,20 @@ th {
     border-top: none;
     height: 32px;
     color:#A1A3A5;
-    padding: 8px;
+    padding: 8px 24px;
+}
+
+th:nth-child(3) {
+    text-align: end;
+}
+
+th:nth-child(7) {
+    text-align: start;
+    padding-left: 20px;
+}
+
+th:last-child {
+    padding-right: 30px;
 }
 
 tr {
@@ -38,12 +52,12 @@ tr {
 
 td {
     border: none;
-    padding: 16px 0px;
+    padding: 16px 16px;
     text-align: center;
 }
 
 td:last-child {
-    max-width: 60px;
+    max-width: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -68,21 +82,28 @@ td:nth-child(3) {
 }
 
 .team1-cell {
-    justify-content: end; 
+    justify-content: flex-end;
+}
+
+.team1-cell * {
+    margin-left: 20px;
 }
 
 .vs-img {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 20px;
 }
+
 .team2-cell {
     justify-content: flex-start;
+}
+
+.team2-cell * {
+    margin-right: 20px;
 }
 
 .team-logo {
     width: auto;
     height: 19px;
-    margin: 0 20px;
 }
 
 .filters-container {

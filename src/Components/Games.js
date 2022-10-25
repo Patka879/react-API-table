@@ -50,6 +50,8 @@ export default function Games() {
                         <th>TIME</th>
                         <th>TEAM 1</th>
                         <th></th>
+                        <th></th>
+                        <th></th>
                         <th>TEAM 2</th>
                         <th>TOURNAMENT</th>
                     </tr>
@@ -63,13 +65,13 @@ export default function Games() {
                             <div className="team1-cell">
                                 {data.teams[0].name}
                                 <img className="team-logo" alt="team-logo" src={data.teams[0].logoUrl} />
-                                {randomNumber()}
                             </div>
                         </td>
+                        <td>{randomNumber()}</td>
                         <td><img className="vs-img" src={icon} alt="icon" /></td>
+                        <td>{randomNumber()}</td>
                         <td>
                             <div className="team2-cell">
-                                {randomNumber()}
                                 <img className="team-logo" alt="team-logo" src={data.teams[1].logoUrl} />
                                 {data.teams[1].name}
                             </div>
