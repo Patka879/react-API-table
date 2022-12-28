@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react"
-
 export default function Filters({filterData}) {
 
     const [title, setTitle] = useState("")

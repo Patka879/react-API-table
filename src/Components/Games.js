@@ -15,7 +15,7 @@ export default function Games() {
         })
         .catch((err) => console.log(err))
     }, []);
-    console.log(data)
+    
 
     useEffect(() => {
         setFilteredData(data)
